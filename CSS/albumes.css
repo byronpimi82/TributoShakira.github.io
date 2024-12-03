@@ -1,0 +1,183 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #FFE5E5;
+}
+
+/* Header Styles */
+#albums h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 4rem;
+    max-width: 90%;
+}
+
+/* Albums Section */
+#albums {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #FFE5E5, #FFB6C1);
+    min-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.album-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.album-item img:hover {
+    transform: scale(1.05);
+}
+
+.album-item p {
+    font-weight: bold;
+    color: #333;
+    padding: 12px 5px;
+    border-radius: 12px;
+    background-color: #f68f9e;
+    width: 100%;
+}
+
+/* Navigation Styles */
+#albums nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #FFB6C1;
+}
+
+#albums nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 5px 50px;
+    background-color: #fa4481;
+}
+
+#albums nav a:hover {
+    color: #fff;
+    background-color: #e63872;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Large Devices (1024px and up) */
+@media screen and (max-width: 1024px) {
+    .albums-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    #albums h2 {
+        font-size: 3.5rem;
+    }
+
+    #albums nav {
+        gap: 1.5rem;
+    }
+
+    #albums nav a {
+        padding: 5px 30px;
+    }
+}
+
+/* Medium Devices (768px and up) */
+@media screen and (max-width: 768px) {
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    #albums h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #albums {
+        padding: 3rem 1rem;
+    }
+
+    #albums nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #albums nav a {
+        width: 80%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Small Devices (480px and up) */
+@media screen and (max-width: 480px) {
+    .albums-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #albums h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .album-item img {
+        max-width: 300px;
+    }
+
+    #albums {
+        padding: 2rem 0.5rem;
+    }
+
+    #albums nav a {
+        width: 90%;
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+}
+

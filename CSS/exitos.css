@@ -1,0 +1,194 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #FFE5E5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Hits Section */
+#hits {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #FFE5E5, #FFB6C1);
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hits h2 {
+    margin-bottom: 2rem;
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+    font-size: 4rem;
+    width: 100%;
+}
+
+.hits-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hits-content video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styles */
+#hits nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #FFB6C1;
+    width: 100%;
+    max-width: 800px;
+    flex-wrap: nowrap;
+}
+
+#hits nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 5px 20px;
+    background-color: #fa4481;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hits nav a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Large screens (above 1024px) */
+@media screen and (min-width: 1025px) {
+    #hits nav a {
+        padding: 5px 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Laptops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hits-content {
+        max-width: 900px;
+    }
+    
+    .hits-content video {
+        max-width: 700px;
+    }
+    
+    #hits nav {
+        max-width: 700px;
+    }
+    
+    #hits nav a {
+        font-size: 1rem;
+        padding: 5px 15px;
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #hits h2 {
+        font-size: 3rem;
+    }
+    
+    .hits-content video {
+        max-width: 600px;
+    }
+    
+    #hits nav {
+        max-width: 600px;
+        padding: 0.8rem;
+    }
+    
+    #hits nav a {
+        font-size: 0.9rem;
+        padding: 5px 15px;
+    }
+}
+
+/* Mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+    #hits {
+        padding: 2rem 0.5rem;
+    }
+    
+    #hits h2 {
+        font-size: 2.5rem;
+    }
+    
+    #hits nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+        grid-template-rows: repeat(2, auto); /* Creates 2 rows */
+        gap: 0.8rem;
+        padding: 1rem;
+        max-width: 300px; /* Adjusted width for mobile */
+    }
+    
+    #hits nav a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 100%;
+        white-space: normal; /* Allows text to wrap if needed */
+        height: 40px; /* Fixed height for uniformity */
+    }
+}
+
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    #hits nav a {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    #hits nav a {
+        background-color: #000;
+        color: #fff;
+    }
+    
+    #hits h2 {
+        color: #000;
+    }
+}
